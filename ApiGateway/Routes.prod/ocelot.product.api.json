@@ -1,0 +1,22 @@
+{
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/api/ProductDetail",
+      "UpstreamHttpMethod": [ "Get" ],
+      "SwaggerKey": "location",
+      "UseServiceDiscovery": true,
+      "ServiceName": "ProductService",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44315
+        }
+      ],
+      "DownstreamPathTemplate": "/api/ProductDetail",
+
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      }
+    }
+  ]
+}
